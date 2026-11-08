@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
+/** @return BelongsTo<Product, $this> */
 class ProductVariant extends Model
 {
     protected $fillable = [

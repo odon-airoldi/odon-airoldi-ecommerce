@@ -15,12 +15,14 @@ class Product extends Model
         'price',
     ];
 
+    /** @return HasMany<ProductVariant, $this> */
     public function variants(): HasMany
     {
         // un prodotto ha molte varianti
         return $this->hasMany(ProductVariant::class);
     }
 
+    /** @return HasMany<ProductImage, $this> */
     public function images(): HasMany
     {
         // un prodotto ha molte immagini
