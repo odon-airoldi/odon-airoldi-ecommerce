@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class ProductVariant extends Model
 {
@@ -13,7 +14,7 @@ class ProductVariant extends Model
         'stock',
     ];
 
-    public function product()
+    public function product(): BelongsTo
     {
         // una variante appartiene a un prodotto
         return $this->belongsTo(Product::class);

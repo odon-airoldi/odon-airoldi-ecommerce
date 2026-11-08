@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class ProductImage extends Model
 {
@@ -13,7 +14,7 @@ class ProductImage extends Model
         'position',
     ];
 
-    public function product()
+    public function product(): BelongsTo
     {
         // un'immagine appartiene a un prodotto
         return $this->belongsTo(Product::class);
