@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\Product;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class ProductSeeder extends Seeder
@@ -29,7 +28,7 @@ class ProductSeeder extends Seeder
             $product = Product::create([
                 'name' => $data['name'],
                 'slug' => $slug,
-                'description' => 'Descrizione di ' . $data['name'],
+                'description' => 'Descrizione di '.$data['name'],
                 'type' => $data['type'],
                 'price' => $data['price'],
             ]);
