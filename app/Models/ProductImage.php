@@ -5,7 +5,6 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-/** @return BelongsTo<Product, $this> */
 class ProductImage extends Model
 {
     protected $fillable = [
@@ -15,6 +14,7 @@ class ProductImage extends Model
         'position',
     ];
 
+    /** @return BelongsTo<Product, $this> */
     public function product(): BelongsTo
     {
         // un'immagine appartiene a un prodotto

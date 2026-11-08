@@ -5,7 +5,6 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-/** @return BelongsTo<Product, $this> */
 class ProductVariant extends Model
 {
     protected $fillable = [
@@ -15,6 +14,7 @@ class ProductVariant extends Model
         'stock',
     ];
 
+    /** @return BelongsTo<Product, $this> */
     public function product(): BelongsTo
     {
         // una variante appartiene a un prodotto
