@@ -26,6 +26,6 @@ class Product extends Model
     public function images(): HasMany
     {
         // un prodotto ha molte immagini
-        return $this->hasMany(ProductImage::class);
+        return $this->hasMany(ProductImage::class)->orderBy('position');
     }
 }
