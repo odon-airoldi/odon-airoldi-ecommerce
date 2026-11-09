@@ -22,4 +22,4 @@ export type Product = {
     price: number;
     images: ProductImage[];
     variants?: ProductVariant[];
-}
+};
